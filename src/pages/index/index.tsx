@@ -1,9 +1,18 @@
 import { useContext } from 'react'
 import { View, ScrollView } from '@tarojs/components';
-import { useDidShow } from '@tarojs/taro'
+import { useDidShow } from '@tarojs/taro';
+
 import { context } from '../../store';
 
-import { Header, TaskCard, TitleBar, Card, TaskBar, PageContent } from '../../components';
+import {
+  Header,
+  TaskCard,
+  TitleBar,
+  Card,
+  TaskBar,
+  PageContent
+} from '../../components';
+
 import './index.less'
 
 

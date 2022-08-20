@@ -36,6 +36,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@qiun/ucharts": "^2.4.3-20220505",
     "@tarojs/components": "3.5.2",
     "@tarojs/helper": "3.5.2",
     "@tarojs/plugin-framework-react": "3.5.2",
