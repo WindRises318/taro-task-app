@@ -43,9 +43,7 @@ const Index = () => {
     <Header />
     <TaskCard />
 
-    <TitleBar title="Today's Task" rightText="See All" rightClick={() => {
-      console.log('aaaaaaaaaa')
-    }} />
+    <TitleBar title="Today's Task" rightContext={<View onClick={() => { console.log('aaaaa') }}>See All</View>} />
 
     <ScrollView scrollX={true}>
       <View className='today-task'>
@@ -55,9 +53,7 @@ const Index = () => {
       </View>
     </ScrollView>
 
-    <TitleBar title="Upcoming Task" rightText="See All" rightClick={() => {
-      console.log('aaaaaaaaaa')
-    }} />
+    <TitleBar title="Upcoming Task" rightContext={<View onClick={() => { console.log('aaaaa') }}>See All</View>} />
 
     <View>
       {

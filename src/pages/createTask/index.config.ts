@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: 'Create Task'
+  navigationBarTitleText: 'Add New Task'
 })

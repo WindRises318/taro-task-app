@@ -5,7 +5,8 @@ export default defineAppConfig({
     'pages/index/index',
     'pages/task/index',
     'pages/notification/index',
-    'pages/setting/index'
+    'pages/setting/index',
+    'pages/createTask/index'
   ],
   window: {
     backgroundTextStyle: 'light',

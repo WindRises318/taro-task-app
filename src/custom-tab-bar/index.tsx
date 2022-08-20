@@ -1,7 +1,6 @@
 
 import { CoverView, CoverImage } from '@tarojs/components';
 import { useContext } from 'react';
-import { useDidShow } from '@tarojs/taro'
 
 import { context } from '../store'
 import Taro from '@tarojs/taro'
@@ -11,25 +10,20 @@ import CreateBtn from '../asset/tabbar/create.png'
 
 import './index.less'
 const Index = () => {
-    const { state, dispatch } = useContext(context)
+    const { state } = useContext(context)
     const handleChangeTab = (item) => {
         if (item.id !== 3) {
             Taro.switchTab({
                 url: item.pagePath
             })
+        }else {
+            Taro.navigateTo({
+                url: item.pagePath
+            })
         }
     }
-
-    useDidShow(() => {
-        dispatch({
-            type: "changeState",
-            payload: {
-                activeIndex: 0
-            }
-        })
-    })
     return <CoverView className='tab-bar-wrapper'>
-        
+
         {
             customTabbar.map(item => {
                 return (
