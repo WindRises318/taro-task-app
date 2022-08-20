@@ -4,12 +4,27 @@ import { useDidShow } from '@tarojs/taro'
 import { context } from '../../store';
 
 import { ListBar, PageContent, Avator } from '../../components'
+
+import user from '../../asset/user.png';
+import logout from '../../asset/logout.png';
+import help from '../../asset/help.png';
+import notice from '../../asset/message.png';
+
 import './index.less'
+
 
 
 const Index = () => {
 
   const { dispatch } = useContext(context)
+
+
+  const list = [
+    { id: 1, icon: user, title: 'User Details' },
+    { id: 2, icon: notice, title: 'Notice', rightContent: <Switch checked={true} color="#03BDDE" /> },
+    { id: 3, icon: help, title: 'Help & Support' },
+    { id: 4, icon: logout, title: 'Logout' },
+  ]
 
   useDidShow(() => {
     dispatch({
@@ -28,9 +43,11 @@ const Index = () => {
         UIUX design
       </View>
     </View>
-
-    <ListBar title='User Detail' rightContent={<View>〉</View>} />
-    <ListBar title='User Detail' rightContent={<Switch checked={true} color="#03BDDE" />} />
+    <View>
+      {
+        list.map(item => <ListBar key={item.id} {...item} iconUrl={item.icon} />)
+      }
+    </View>
   </PageContent>
 }
 

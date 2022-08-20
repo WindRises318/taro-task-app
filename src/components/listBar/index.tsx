@@ -11,7 +11,7 @@ interface ListBarProps {
 }
 
 const Index: React.FC<ListBarProps> = (props) => {
-    const { iconUrl = TeamImage, title, rightContent } = props
+    const { iconUrl = TeamImage, title, rightContent = (<View>〉</View>) } = props
     return <View className='list-bar'>
         <Image src={iconUrl} className="icon" />
         <View className='info'>
