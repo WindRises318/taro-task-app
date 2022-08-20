@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import Taro from '@tarojs/taro'
 import { View, Input, Picker, Text, Switch, Button } from '@tarojs/components';
 
 
@@ -15,6 +17,7 @@ const Index = () => {
 
     const [taskType, setTaskType] = useState(1)
     const [startTime, setStartTime] = useState('00:00')
+
     return <PageContent className='add-task'>
         <Calander />
         <TitleBar title='Task title' />
@@ -49,7 +52,7 @@ const Index = () => {
 
         <TitleBar title='Get alart for this task' rightContext={<Switch checked={true} color="#03BDDE"/>} />
 
-        <Button className='done-btn'>
+        <Button className='done-btn' onClick={() => Taro.navigateBack()}>
             Done
         </Button>
     </PageContent>
