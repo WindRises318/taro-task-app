@@ -1,0 +1,35 @@
+.tab-wrapper {
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px 5px #adabab4d;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: relative;
+    box-sizing: border-box;
+
+    .tab {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        transition: color 0.1s ease-out;
+
+        &.active {
+            color: #fff;
+        }
+    }
+
+    .silder-bar {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        height: calc(100% - 20px);
+        background-color: #ff4400cc;
+        z-index: 1;
+        border-radius: 10px;
+        transition: transform 0.2s ease-out;
+        transform: translate3d(0, 0, 0);
+    }
+}
