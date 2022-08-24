@@ -5,20 +5,19 @@ import './index.less';
 type ItemType = 'default' | 'primary' | 'warning' | 'active' | string
 
 interface TabItemProps {
-    [propName: string]: any
     type?: ItemType,
     title?: string,
     time?: string,
     percent?: number,
     strokeWidth?: number,
-    
 }
 const colorTypes = {
     default: '#565FF5',
     primary: '#565FF5',
     active: '#03BDDE',
     warning: '#FD6F3D',
-}
+} as const
+
 const Index: React.FC<TabItemProps> = (props) => {
     const {
         type = "default",

@@ -11,7 +11,7 @@ const arcbarStyle = {
     startAngle: -0.1,
     endAngle: 0.2,
     gap: 2,
-}
+} as const;
 
 const Index = () => {
     useEffect(() => {

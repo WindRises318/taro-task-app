@@ -9,7 +9,7 @@ export interface TState {
 
 export interface TActions {
     type: actionType,
-    payload: any
+    payload: TState
 }
 
 

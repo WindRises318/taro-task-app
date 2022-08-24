@@ -1,9 +1,10 @@
 import { View } from '@tarojs/components';
 import './index.less';
 
+HTMLDivElement
 
-const Index = ({ children, className = "" }) => {
-    return <View className={`page-wrapper ${className}`}>
+const Index = ({ children, className = "", ...rest }) => {
+    return <View className={`page-wrapper ${className}`} {...rest}>
         {children}
     </View>
 }
