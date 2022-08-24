@@ -4,17 +4,17 @@ import './index.less'
 
 interface TitleBarProps {
     title: string,
-    rightContext?: React.ReactNode,
+    rightContent?: React.ReactNode,
 }
 
 const Index: React.FC<TitleBarProps> = (props) => {
-    const { title, rightContext } = props
+    const { title, rightContent } = props
     return <View className='title-bar'>
         <Text className='left-title'>
             {title}
         </Text>
         <View className='right-title'>
-            {rightContext}
+            {rightContent}
         </View>
     </View>
 }

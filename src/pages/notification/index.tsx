@@ -29,7 +29,7 @@ const Index = () => {
   })
 
   return <PageContent>
-    <TitleBar title='Today' rightText='Mark all as read' />
+    <TitleBar title='Today' rightContent='Mark all as read' />
     <View>
       {
         todayList.map(item => <NoticeCard {...item} type={(item.type as CardType)} key={item.id} />)

@@ -50,7 +50,7 @@ const Index = () => {
             </Picker>
         </View>
 
-        <TitleBar title='Get alart for this task' rightContext={<Switch checked={true} color="#03BDDE"/>} />
+        <TitleBar title='Get alart for this task' rightContent={<Switch checked={true} color="#03BDDE"/>} />
 
         <Button className='done-btn' onClick={() => Taro.navigateBack()}>
             Done
